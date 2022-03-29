@@ -19,4 +19,15 @@ class EleveController extends AbstractController
             'eleves' => $eleves,
         ]);
     }
+
+    /**
+     * @Route("/detail-eleve{id}", name="app_detail_eleve")
+     */
+    public function showEleve($id, EleveRepository $el): Response
+    {
+        $eleve = $el->find($id);
+        return $this->render('eleve/detail-eleve.html.twig', [
+            'eleve' => $eleve,
+        ]);
+    }
 }

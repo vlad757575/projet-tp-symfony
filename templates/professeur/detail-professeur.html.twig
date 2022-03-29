@@ -48,22 +48,25 @@
     </div>
     <!-- main-content -->
 
-    <div class="d-flex flex-wrap justify-content-around">
-        {% for eleve in eleves %}
+    <div class="d-flex flex-wrap justify-content-around" style="padding-bottom: 7px; padding-top:50px;">
+
         <div class="card " style="width: 18rem; padding-top:30px;">
 
 
-            <img src="https://picsum.photos/200/300" class="card-img-top" alt="...">
+            <img src="https://f.hellowork.com/obs-static-images/seo/ObsJob/professeur.jpg" class="card-img-top" alt="..." style="width: 600px;">
 
             <div class="card-body">
-                <h5 class="card-title">Elève</h5>
-                <p>{{eleve.nom}} {{eleve.prenom}}</p>
+                <h5 class="card-title">Professeur</h5>
+                <p>{{professeur.nom}} {{professeur.prenom}}</p>
+                <p>{{professeur.matiere.nom}}</p>
 
-                <a href="{{path('app_detail_eleve',{id: eleve.id})}}" class="btn btn-primary">Details</a>
+
+                <a href="#" class="btn btn-primary">Details</a>
 
             </div>
+
         </div>
-        {% endfor %}
+
     </div>
 
     <!-- Optional JavaScript -->

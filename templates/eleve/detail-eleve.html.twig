@@ -49,7 +49,7 @@
     <!-- main-content -->
 
     <div class="d-flex flex-wrap justify-content-around">
-        {% for eleve in eleves %}
+
         <div class="card " style="width: 18rem; padding-top:30px;">
 
 
@@ -58,12 +58,15 @@
             <div class="card-body">
                 <h5 class="card-title">Elève</h5>
                 <p>{{eleve.nom}} {{eleve.prenom}}</p>
+                <p>{{eleve.classe.niveau}}</p>
 
-                <a href="{{path('app_detail_eleve',{id: eleve.id})}}" class="btn btn-primary">Details</a>
+
+
+
 
             </div>
         </div>
-        {% endfor %}
+
     </div>
 
     <!-- Optional JavaScript -->

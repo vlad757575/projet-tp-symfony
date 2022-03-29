@@ -28,7 +28,7 @@ class Prof
     private $prenom;
 
     /**
-     * @ORM\Column(type="string", length=20)
+     * @ORM\Column(type="date", length=20)
      */
     private $date_de_naissance;
 

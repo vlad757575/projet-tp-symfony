@@ -48,16 +48,27 @@
     </div>
     <!-- main-content -->
 
-    <div class="card" style="width: 18rem; padding-top:30px;
-">
-        <img src="https://picsum.photos/200/300
-" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="d-flex flex-wrap justify-content-around" style="padding-bottom: 7px; padding-top:50px;">
+        {% for professeur in professeurs %}
+        <div class="card " style="width: 18rem; padding-top:30px;">
+
+
+            <img src="https://picsum.photos/200/300" class="card-img-top" alt="...">
+
+            <div class="card-body">
+                <h5 class="card-title">Professeur</h5>
+                <p>{{professeur.nom}} {{professeur.prenom}}</p>
+                <p>{{professeur.matiere.nom}}</p>
+
+                <a href="{{path('app_detail_professeur',{id: professeur.id})}}
+" class="btn btn-primary">Details</a>
+
+            </div>
+
         </div>
+        {% endfor %}
     </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
