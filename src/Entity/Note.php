@@ -39,7 +39,7 @@ class Note
     private $eleve;
 
     /**
-     * @ORM\ManyToOne(targetEntity=matiere::class, inversedBy="notes")
+     * @ORM\ManyToOne(targetEntity=Matiere::class, inversedBy="notes")
      */
     private $matiere;
 

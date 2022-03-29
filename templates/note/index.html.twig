@@ -47,21 +47,13 @@
         </nav>
     </div>
     <!-- main-content -->
-
-    <div class="d-flex flex-wrap justify-content-around">
-
-        <div class="card " style="width: 18rem; padding-top:30px;">
-            {% for eleve in eleves %}
-
-            <img src="https://picsum.photos/200/300" class="card-img-top" alt="...">
-
-            <div class="card-body">
-                <h5 class="card-title">Elève</h5>
-                <p>{{eleve.nom}} {{eleve.prenom}}</p>
-
-                <a href="#" class="btn btn-primary">Details</a>
-                {% endfor %}
-            </div>
+    <div class="card" style="width: 18rem; padding-top:30px;
+">
+        <img src="https://picsum.photos/200/300" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
     </div>
 

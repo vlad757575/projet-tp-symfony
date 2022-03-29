@@ -30,13 +30,13 @@ class Classe
     private $niveau;
 
     /**
-     * @ORM\ManyToOne(targetEntity=prof::class)
+     * @ORM\ManyToOne(targetEntity=Prof::class)
      * @ORM\JoinColumn(nullable=false)
      */
     private $prof;
 
     /**
-     * @ORM\OneToMany(targetEntity=eleve::class, mappedBy="classe")
+     * @ORM\OneToMany(targetEntity=Eleve::class, mappedBy="classe")
      */
     private $eleve;
 

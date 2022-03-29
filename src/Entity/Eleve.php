@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Entity\Note;
 use App\Repository\EleveRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -41,7 +42,7 @@ class Eleve
     private $classe;
 
     /**
-     * @ORM\OneToMany(targetEntity=note::class, mappedBy="eleve")
+     * @ORM\OneToMany(targetEntity=Note::class, mappedBy="eleve")
      */
     private $note;
 

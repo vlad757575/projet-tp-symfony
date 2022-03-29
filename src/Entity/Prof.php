@@ -33,7 +33,7 @@ class Prof
     private $date_de_naissance;
 
     /**
-     * @ORM\ManyToOne(targetEntity=matiere::class, inversedBy="profs")
+     * @ORM\ManyToOne(targetEntity=Matiere::class, inversedBy="profs")
      * @ORM\JoinColumn(nullable=false)
      */
     private $matiere;
