@@ -32,6 +32,12 @@ class Prof
      */
     private $date_de_naissance;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=matiere::class, inversedBy="profs")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $matiere;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +75,18 @@ class Prof
     public function setDateDeNaissance(string $date_de_naissance): self
     {
         $this->date_de_naissance = $date_de_naissance;
+
+        return $this;
+    }
+
+    public function getMatiere(): ?matiere
+    {
+        return $this->matiere;
+    }
+
+    public function setMatiere(?matiere $matiere): self
+    {
+        $this->matiere = $matiere;
 
         return $this;
     }
